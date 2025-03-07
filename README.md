@@ -77,19 +77,5 @@ The database contains the following tables:
 
 You can query the database directly using the `query_logs.py` script:
 
-```bash
-## MCP SQLite Server
 
-To run the MCP SQLite server:
 
-```bash
-npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
-```
-
-python3 query_logs.py
-
-# Run a custom query
-python3 query_logs.py "SELECT * FROM logs WHERE level = 'ERROR' LIMIT 10"
-```
-
-The script outputs results in CSV format for easy parsing and further processing.
