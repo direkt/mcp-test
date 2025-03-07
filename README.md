@@ -49,5 +49,8 @@ python3 query_logs.py
 
 # Run a custom query
 python3 query_logs.py "SELECT * FROM logs WHERE level = 'ERROR' LIMIT 10"
-```
+
+MCP SQL Lite Server in Cursor
+
+npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
 
