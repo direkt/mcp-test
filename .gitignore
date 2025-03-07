@@ -1,2 +1,4 @@
 logs.db
 *.gz
+*.db
+.DS_Store

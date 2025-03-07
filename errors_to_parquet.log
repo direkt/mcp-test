@@ -1,0 +1,52 @@
+2025-03-07 12:56:28,879 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:56:28,880 - errors_to_parquet - INFO - Querying errors table
+2025-03-07 12:56:28,881 - errors_to_parquet - ERROR - Error querying database: Execution failed on sql 'SELECT * FROM errors LIMIT 10': no such table: errors
+2025-03-07 12:57:12,146 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:57:12,148 - errors_to_parquet - INFO - Querying parsing_errors table
+2025-03-07 12:57:12,148 - errors_to_parquet - INFO - Retrieved 0 parsing error records
+2025-03-07 12:57:12,149 - errors_to_parquet - INFO - Querying error logs from logs table
+2025-03-07 12:57:12,150 - errors_to_parquet - INFO - Retrieved 10 error log records
+2025-03-07 12:57:12,150 - errors_to_parquet - INFO - Saving 10 records to error_logs_20250307_125712.parquet
+2025-03-07 12:57:12,150 - errors_to_parquet - ERROR - Error saving parquet file: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-03-07 12:57:28,079 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:57:28,081 - errors_to_parquet - INFO - Querying parsing_errors table
+2025-03-07 12:57:28,083 - errors_to_parquet - INFO - Retrieved 0 parsing error records
+2025-03-07 12:57:28,083 - errors_to_parquet - INFO - Querying error logs from logs table
+2025-03-07 12:57:28,084 - errors_to_parquet - INFO - Retrieved 10 error log records
+2025-03-07 12:57:28,084 - errors_to_parquet - INFO - Saving 10 records to error_logs_20250307_125728.parquet
+2025-03-07 12:57:28,618 - errors_to_parquet - INFO - Successfully saved parquet file to error_logs_20250307_125728.parquet
+2025-03-07 12:57:28,619 - errors_to_parquet - INFO - Querying stack traces for 1 log IDs
+2025-03-07 12:57:28,619 - errors_to_parquet - INFO - Retrieved 0 stack trace records
+2025-03-07 12:57:31,970 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:57:31,970 - errors_to_parquet - INFO - Querying parsing_errors table
+2025-03-07 12:57:31,971 - errors_to_parquet - INFO - Retrieved 0 parsing error records
+2025-03-07 12:57:31,971 - errors_to_parquet - INFO - Querying error logs from logs table
+2025-03-07 12:57:32,124 - errors_to_parquet - INFO - Retrieved 10289 error log records
+2025-03-07 12:57:32,125 - errors_to_parquet - INFO - Saving 10289 records to error_logs_20250307_125732.parquet
+2025-03-07 12:57:32,145 - errors_to_parquet - INFO - Successfully saved parquet file to error_logs_20250307_125732.parquet
+2025-03-07 12:57:32,146 - errors_to_parquet - INFO - Querying stack traces for 1076 log IDs
+2025-03-07 12:57:32,146 - errors_to_parquet - INFO - Retrieved 0 stack trace records
+2025-03-07 12:59:27,635 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:59:27,635 - errors_to_parquet - INFO - Querying all logs from logs table
+2025-03-07 12:59:28,427 - errors_to_parquet - INFO - Retrieved 592790 log records
+2025-03-07 12:59:28,427 - errors_to_parquet - INFO - Saving 592790 records to all_logs_20250307_125928.parquet
+2025-03-07 12:59:28,780 - errors_to_parquet - INFO - Successfully saved parquet file to all_logs_20250307_125928.parquet
+2025-03-07 12:59:44,102 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 12:59:44,102 - errors_to_parquet - INFO - Querying all logs from logs table
+2025-03-07 12:59:44,733 - errors_to_parquet - INFO - Retrieved 592790 log records
+2025-03-07 12:59:44,733 - errors_to_parquet - INFO - Saving 592790 records to all_logs_20250307_125944.parquet
+2025-03-07 12:59:45,041 - errors_to_parquet - INFO - Successfully saved parquet file to all_logs_20250307_125944.parquet
+2025-03-07 13:00:09,339 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 13:00:09,340 - errors_to_parquet - INFO - Querying all logs from logs table
+2025-03-07 13:00:09,970 - errors_to_parquet - INFO - Retrieved 592790 log records
+2025-03-07 13:00:09,970 - errors_to_parquet - INFO - Saving 592790 records to all_logs_20250307_130009.parquet
+2025-03-07 13:00:10,256 - errors_to_parquet - INFO - Successfully saved parquet file to all_logs_20250307_130009.parquet
+2025-03-07 13:01:00,068 - errors_to_parquet - INFO - Connecting to database: logs.db
+2025-03-07 13:01:00,069 - errors_to_parquet - INFO - Querying all logs from logs table
+2025-03-07 13:01:00,710 - errors_to_parquet - INFO - Retrieved 592790 log records
+2025-03-07 13:01:00,710 - errors_to_parquet - INFO - Saving 592790 records to all_logs_20250307_130100.parquet
+2025-03-07 13:01:00,987 - errors_to_parquet - INFO - Successfully saved parquet file to all_logs_20250307_130100.parquet
