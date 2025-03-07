@@ -18,6 +18,9 @@ python3 create_log_db.py
 
 To configure the MCP SQLite server in Cursor-
 
+- Cursor Settings
+- MCP 
+- Add New MCP Server
 - Name `SQLlite`
 - Set the type to `command`
 - Put this in the command box 
