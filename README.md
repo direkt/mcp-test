@@ -1,6 +1,6 @@
-# Log Analysis with SQLite MCP Server
+# Log Analysis with SQLite
 
-This project provides tools to create an SQLite database from compressed log files and interact with it using the Model Context Protocol (MCP) SQLite server.
+This project provides tools to create an SQLite database from compressed log files and interact with it programmatically.
 
 ## Install instructions
 
@@ -14,20 +14,6 @@ Place log files in the folder as .gz files, then run:
 ```bash
 python3 create_log_db.py 
 ```
-## MCP SQLite Server
-
-To configure the MCP SQLite server in Cursor-
-
-- Cursor Settings
-- MCP 
-- Add New MCP Server
-- Name `SQLlite`
-- Set the type to `command`
-- Put this in the command box 
-```bash
-npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
-```
-
 
 ## Contents
 
@@ -50,12 +36,19 @@ The database contains the following tables:
 - `source_file`: Source log file
 - `raw_log`: Raw log entry
 
-### `json_logs` Table
+### `stack_traces` Table
 
-- `id`: Unique identifier for each JSON log entry
-- `timestamp`: Timestamp of the JSON log entry
-- `log_data`: Full JSON log data
+- `id`: Unique identifier for each stack trace
+- `log_id`: Reference to the log entry this stack trace belongs to
+- `stack_trace`: Full stack trace text
+
+### `parsing_errors` Table
+
+- `id`: Unique identifier for each parsing error
+- `line`: The line that couldn't be parsed
 - `source_file`: Source log file
+- `error_message`: Error message explaining why parsing failed
+- `timestamp`: When the parsing error occurred
 
 ## Log Statistics
 
@@ -66,7 +59,7 @@ The database contains the following tables:
   - ERROR: 1,141
   - DEBUG: 10
 
-## Using the Database Directly
+## Using the Database Programmatically
 
 You can query the database directly using the `query_logs.py` script:
 
@@ -78,11 +71,4 @@ python3 query_logs.py
 python3 query_logs.py "SELECT * FROM logs WHERE level = 'ERROR' LIMIT 10"
 ```
 
-## MCP SQLite Server
-
-To run the MCP SQLite server:
-
-```bash
-npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
-```
-
+The script outputs results in CSV format for easy parsing and further processing.
