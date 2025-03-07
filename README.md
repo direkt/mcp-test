@@ -18,9 +18,9 @@ python3 create_log_db.py
 
 To configure the MCP SQLite server in Cursor-
 
-Name SQLlite
-Set the type to command
-Put this in the command box 
+- Name `SQLlite`
+- Set the type to `command`
+- Put this in the command box 
 ```bash
 npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
 ```
