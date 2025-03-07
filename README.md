@@ -64,17 +64,6 @@ The database contains the following tables:
 - `error_message`: Error message explaining why parsing failed
 - `timestamp`: When the parsing error occurred
 
-## Log Statistics
-
-## Using the Database Directly
-- Log level distribution:
-  - INFO: 851,068
-  - WARN: 13,890
-  - ERROR: 1,141
-  - DEBUG: 10
-
-## Using the Database Programmatically
-
 You can query the database directly using the `query_logs.py` script:
 
 
