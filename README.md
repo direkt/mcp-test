@@ -2,6 +2,19 @@
 
 This project provides tools to create an SQLite database from compressed log files and interact with it using the Model Context Protocol (MCP) SQLite server.
 
+## Install instructions
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+Place log files in the folder, then run:
+```bash
+python3 create_log_db.py 
+```
+
 ## Contents
 
 - `create_log_db.py`: Script to extract and parse log files into an SQLite database
@@ -49,8 +62,13 @@ python3 query_logs.py
 
 # Run a custom query
 python3 query_logs.py "SELECT * FROM logs WHERE level = 'ERROR' LIMIT 10"
+```
 
-MCP SQL Lite Server in Cursor
+## MCP SQLite Server
 
+To run the MCP SQLite server:
+
+```bash
 npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
+```
 
