@@ -1,6 +1,6 @@
-# Log Analysis with SQLite
+# Log Analysis with SQLite MCP Server
 
-This project provides tools to create an SQLite database from compressed log files and interact with it programmatically.
+This project provides tools to create an SQLite database from compressed log files and interact with it using the Model Context Protocol (MCP) SQLite server.
 
 ## Install instructions
 
@@ -14,6 +14,20 @@ Place log files in the folder as .gz files, then run:
 ```bash
 python3 create_log_db.py 
 ```
+## MCP SQLite Server
+
+To configure the MCP SQLite server in Cursor-
+
+- Cursor Settings
+- MCP 
+- Add New MCP Server
+- Name `SQLlite`
+- Set the type to `command`
+- Put this in the command box 
+```bash
+npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
+```
+
 
 ## Contents
 
@@ -52,7 +66,7 @@ The database contains the following tables:
 
 ## Log Statistics
 
-- Total log entries: 1,002,326
+## Using the Database Directly
 - Log level distribution:
   - INFO: 851,068
   - WARN: 13,890
@@ -64,7 +78,14 @@ The database contains the following tables:
 You can query the database directly using the `query_logs.py` script:
 
 ```bash
-# View database information
+## MCP SQLite Server
+
+To run the MCP SQLite server:
+
+```bash
+npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
+```
+
 python3 query_logs.py
 
 # Run a custom query
