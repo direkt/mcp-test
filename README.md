@@ -10,7 +10,7 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-Place log files in the folder, then run:
+Place log files in the folder as .gz files, then run:
 ```bash
 python3 create_log_db.py 
 ```
