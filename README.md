@@ -14,6 +14,14 @@ Place log files in the folder, then run:
 ```bash
 python3 create_log_db.py 
 ```
+## MCP SQLite Server
+
+To run the MCP SQLite server:
+
+```bash
+npx -y @smithery/cli@latest run mcp-server-sqlite-npx --config "{\"databasePath\":\"/path/to/thedatbase/logs.db\"}"
+```
+
 
 ## Contents
 
